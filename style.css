@@ -57,14 +57,14 @@ a:hover {
 }
 
 .container {
-    width: 1110px;
+    max-width: 1110px;
     margin: auto;
 }
 
 
 /* HEADER */
 header {
-    width: 1110px;
+    max-width: 1110px;
     margin: auto;
     display:flex;
     justify-content: space-between;
@@ -107,14 +107,14 @@ main {
 }
 
 .hero__container {
-    width: 1110px;
+    max-width: 1110px;
     margin: auto;
     position: relative;
 }
 
 .hero__info h1{
     padding-top: 65px;
-    width: 706px;
+    max-width: 706px;
 }
 
 .hero__myname {
@@ -124,11 +124,11 @@ main {
 }
 
 .hero__info p {
-    width: 417px;
+    max-width: 417px;
 }
 
 .hero__profile-image {
-    width: 445px;
+    max-width: 445px;
     position: absolute;
     top: 0;
     right: 0;
@@ -168,10 +168,58 @@ footer {
     margin-top: 60px;
 }
 
+/* TABLET */
+@media only screen and (max-width: 1110px) {
+    .hero {
+        padding: 25px;
+    }
 
-/* PHONE */
-@media only screen and (max-width: 375px) {
     h1 {
-        font-size: 44px;
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    .hero__profile-image {
+        display:none;
     }
 }
+
+
+/* PHONE */
+@media only screen and (max-width: 376px) {
+    h1 {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    .header {
+        max-width: 360px;
+    }
+
+    .hero__container {
+        max-width: 360px;
+    }
+
+    .hero__info p {
+        max-width: 90vw;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero__profile-image {
+        position: relative;
+    }
+
+    .hero__rings {
+    position: absolute;
+    top: 0;
+    left: -340px;
+}
+}
+
+
